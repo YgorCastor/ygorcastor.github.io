@@ -1,0 +1,297 @@
+baseURL: "https://ycastor.me"
+languageCode: "en-us"
+title: "Cλstor Deck"
+theme: hugo-profile
+
+Paginate: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+params:
+  title: ""
+  description: Text about my cool site
+  favicon: "/images/logo.png"
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "dark" # dark
+
+  # font:
+  #   fontSize: 1.5rem # default: 1rem
+  #   fontWeight: 500 # default: 400
+  #   lineHeight: 1 # default: 1.5
+  #   textAlign: right # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  navbar:
+     align: ms-auto
+     brandLogo: "/images/banner.png" # Logo for the brand | default is the favicon variable
+     brandName: "" # Brand name for the brand | default is the title variable
+
+  #   menus:
+  #     disableAbout: true
+  #     disableExperience: true
+  #     disableEducation: true
+  #     disableProjects: true
+  #     disableAchievements: true
+  #     disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Heya, I'm"
+    title: "Ygor"
+    subtitle: "And i'm a programming addict"
+    content: "Tech Lead, Software Engineer, DevSecOps, AI Enthusiast and Coffee Maker"
+    image: /images/caricature.png
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/YgorCastor
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/ygorcastor/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpeg"
+    content: |-
+      I'm a Lead Software Engineer with focus on backend development and DevSecOps, i'm passionate about programming and a huge functional programming enthusiast. Right now i'm based at the 
+      Netherlands.
+    skills:
+      enable: true
+      title: "I use to work with tons of technologies, and my main habilities are with the techs:"
+      items:
+        - "Java/Kotlin/Scala"
+        - "Elixir"
+        - "C#/F#"
+        - "TDD/BDD"
+        - "JavaScript/TypeScript"
+        - "ReasonML"
+        - "Haskell"
+        - "Go"
+        - "C/C++"
+        - "AWS/Azure/GCP"
+        - "Hashicorp Stack"
+        - "Oracle/Postgres"
+        - "RavenDB"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - job: "Lead Software Engineer - Elixir/DevSecOps"
+        company: "DPG Media"
+        companyUrl: "https://www.dpgmediagroup.com/"
+        date: "Dec 2021 - present"
+        content: |
+          MyChannels Team, responsible for managing and serving all the videos and games for the brands of DPG Media (ad.nl, volkskrant.nl, destentor.nl, etc)
+
+          - Analysed and improved SQL bottlenecks, improving the performance in some queries by more than 200%.
+          - Refactored and mapped the whole structure into Terraform modules, making it easier to manage the AWS services.
+          - Introduced the use of Grafana and Prometheus to improve our reliability and observability. 
+          - Fixed and improved security in our cloud environment, fixing more than 20 issues.
+          - Improved the backend architecture and overall documentation.
+
+      - job: "Lead Software Engineer - Java/Kotlin"
+        company: "ABN Amro"
+        companyUrl: "https://www.abnamro.nl/"
+        date: "Apr 2021 - Dec 2021"
+        content: |
+          Document & Data Processing team tech lead, we are responsible for the creation and maintenance of the documents classification and data extraction pipeline inside the bank.
+
+          - Leading the redesign of a bloated monolith to a new event-based microservices architecture on cloud.
+          - Enforced the use of TDD and Mutation Testing to improve the code quality, my team now have a 95% test coverage with more than 85% of mutation coverage!
+          - Sharing the culture of "doing it together", spreading the word of pair programming and knowledge sharing sessions, this allowed the team to feel safe in sharing knowledge and trying new approaches, which led to a considerable increase in the team confidence.
+          - Compared to our older bloated service, the new architecture reduced the complexity considerably, it's so extensible that we were able to add new input flows in a couple of days!
+          - As a Kotlin enthusiast, i brought the Kotlin usage to backend services, creating an internal community for Kotlin developers, which in just one month became one of the largest developer community inside the bank.
+          - Developing services with Kotlin + Quarkus, i've also created some quarkus extensions to make lots of the basic configurations inside of the bank working out-of-the-box.
+          - Shared the knowledge about DDD, Event-Sourcing, Hexagonal Architecture, Mutation Testing, Functional Programming and a lot more!
+
+      - job: "Senior Software Engineer - Java/Kotlin"
+        company: "Bol"
+        companyUrl: "https://bol.com"
+        date: "Dec 2019 - Apr 2021"
+        info:
+          enable: false
+        content: |
+          Software engineer at the Team 8C of the Retailer Offer fleet. 
+
+          - Was Responsible for the maintenance of the system which is responsible for store, analyse and retransmit the offers created by all retailers that are partners of bol.com. These services have a normal load of 3 thousand requests per second (and it's increasing!), reaching up to 6-9 thousand requests at Black Friday! 
+          - Worked in a migration from a legacy monolith to a micro-services architecture, while keeping everything working as expected! Quite a challenge.
+          - I was also responsible for the creation of several python scripts to help developers and business analysts to test and run analysis on the system offers. 
+          - Bought the usage of Kotlin to the team, tought the usage of coroutines that improved our performance two-fold.
+
+      - job: "Senior Software Engineer - Groovy"
+        company: "ZG Soluções"
+        companyUrl: "https://zgsolucoes.com.br/"
+        date: "Apr 2019 - Nov 2019"
+        content: |
+          Software Engineering and New Products team, developing strategic products as a FullStack Developer. 
+
+          - Developed micro-services written in Groovy with Grails
+          - Improved a domain specific language
+          - Creation and maintenance of Domain Specific Languages
+          - Front-end development using Angular 8
+          - Experience with ElasticSearch and Metabase 
+          - Experience with PostgreSQL and SQL Performance Tuning
+          - Experience with refactoring and performance optimization
+
+      - job: "Full Stack Software Engineer"
+        company: "TOTVS"
+        companyUrl: "https://en.totvs.com/"
+        date: "Apr 2016 - Apr 2019"
+        content: |
+          Framework and Software Engineering Team
+
+          - One of the lead architects responsible to oversee the migration of the company ERP from a Delphi monolith to a cloud capable microservice
+          architecture.
+          - Responsible for enforcing good development practices for the JAVA codebase.
+          - Internal training of new developers.
+          - Writing agile documentation, experience as a SCRUM Master and with Design Thinking.
+          - Software development using Java and several technologies, such as: Spring Framework, OSGi, Apache Karaf, Apache Camel, Apache
+          Aries, Apache Felix, Apache Shiro, Apache Maven, Messaging (JMS) and JasperReports.
+          - Front-End development using JavaScript, GWT, GWTP, HTML5/CSS3 and Angular.
+          - Experience with design patterns and code quality, test driven development, enterprise integration patterns (EIP) and algorithm's complexity analysis.
+          - Building pipelines for continuous delivery and analysis using Jenkins, Sonar, PMD and CheckStyle.
+          - Experience with ElasticSearch and Kafka.
+
+      - job: "Medior Software Engineer"
+        company: "CerradoWeb"
+        companyUrl: "https://cerradoweb.com.br"
+        date: "Sep 2014 - Mar 2016"
+        content: |
+          - Development of Websites/HotSites using HTML5, JS and CSS3.
+          - Development of an ERP software using technologies like: Spring, JSF, Hibernate, JavaScript, JasperReports.
+          - Responsible to bring good practices to the company, such as: Unit and integration tests, use of SCM software and agile development
+
+      - job: "Junior Developer"
+        company: "TJGO"
+        companyUrl: "https://www.tjgo.jus.br/"
+        date: "Jun 2012 - May 2014"
+        content: |
+          - Development of an internal software to control the stock of office products. The software was developed using PHP, MySQL, JavaScript
+          and HTML5/CSS3
+          - Maintenance of Linux servers
+          - Tech support
+
+  # Education
+  education:
+    enable: true
+    items:
+      - title: "Bachelor in Information Systems"
+        school:
+          name: "Federal University of Goiás"
+          url: "https://inf.ufg.br/?atr=en&locale=en"
+        date: "2014 - 2017"
+        content: |-
+          - Published an Article at the ERI-GO 2017 Conference titled: Churning Detection, Identifying customer churn using supervised learning.
+      - title: "Masters in Computer Science (Interrupted)"
+        school:
+          name: "Federal University of Goiás"
+          url: "https://inf.ufg.br/?atr=en&locale=en"
+        date: "2018 - Interrupted"
+        content: |-
+          - Placed first at an internal chest xray pneumonia detection challenge
+
+  # Achievements
+  achievements:
+    enable: true
+    items:
+      - title: Coordinator for the "The Developers Conference - Future" Kotlin Track 2021
+        content: The largest software event in Latin America!
+        url: https://thedevconf.com/tdc/2021/future/trilha-kotlin
+      - title: Speaker for the "The Developers Conference - Connections" International Java Track 2021
+        content: "Hexagonal Architecture: How to design ports and adapters in Java"
+        url: https://thedevconf.com/tdc/2021/connections/trilha-java-internacional
+      - title: Panelist for the "The Developers Conference - Connections" Kotlin Track 2021
+        content: "Beyond Android, why should i consider Kotlin at the backend?"
+        url: https://thedevconf.com/tdc/2021/connections/trilha-kotlin
+      - title: Speaker for the "The Developers Conference - Porto Alegre" 2020
+        content: "Java without exceptions, how to program expecting the worst"
+        url: https://thedevconf.com/tdc/2020/poaonline/trilha-java
+
+  # projects
+  projects:
+    enable: true
+    items:
+      - title: Ravix
+        content: A RavenDB Elixir Driver
+        badges:
+          - "Elixir"
+          - "RavenDB"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/YgorCastor/ravix
+
+      - title: Ravix Ecto
+        content: An Ecto Wrapper for RavenDB
+        badges:
+          - "Elixir"
+          - "RavenDB"
+          - "Ecto"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/YgorCastor/ravix-ecto
+
+      - title: Chest Pneumonia X-Ray Detector
+        content: A DeepLearning project to detect pneumonia using X-Rays
+        badges:
+          - "Python"
+          - "DeepLearning"
+          - "TensorFlow"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/YgorCastor/deeplearning-chest-xray-challenge
+
+      - title: FanGurps
+        content: A converter from the Gurps Character Sheet to Fantasy Grounds Gurps Entities
+        badges:
+          - "Java"
+          - "Micronaut"
+          - "Cyclops"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/YgorCastor/fangurps
+
+      - title: Kawaii Diff Gen
+        content: A Dynamic Ragnarok Online Diff Patcher
+        badges:
+          - "C#"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/YgorCastor/kawaiidiffgen
+
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      github: https://github.com/YgorCastor
+      linkedin: https://www.linkedin.com/in/ygorcastor/
